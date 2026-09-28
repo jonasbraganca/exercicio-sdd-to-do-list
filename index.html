@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f5ef" />
+    <title>Tarefas | Lista pessoal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <p class="eyebrow"><span class="brand-mark" aria-hidden="true"></span> Lista pessoal</p>
+        <h1>Minhas tarefas<span class="heading-period">.</span></h1>
+      </header>
+
+      <section class="task-section" aria-labelledby="task-section-title">
+        <h2 id="task-section-title" class="visually-hidden">Lista de tarefas</h2>
+        <form id="task-form" class="task-form">
+          <label class="visually-hidden" for="task-title">Título da tarefa</label>
+          <input
+            id="task-title"
+            name="title"
+            type="text"
+            placeholder="Escreva uma tarefa..."
+            maxlength="100"
+            autocomplete="off"
+            required
+            aria-describedby="form-message"
+          />
+          <button class="add-button" type="submit"><span aria-hidden="true">+</span> Adicionar</button>
+        </form>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+
+        <ul id="task-list" class="task-list" aria-label="Tarefas"></ul>
+        <p id="empty-state" class="empty-state">Sua lista está vazia.</p>
+      </section>
+    </main>
+  </body>
+</html>
